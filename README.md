@@ -1,24 +1,35 @@
-# Gen AI Company Description RAG
+# RAG, RAG-Fusion, and RAG-Multi-Query
 
 ## Overview
-This repository utilizes a dataset of public companies, featuring their names and descriptions. The goal is to deploy a language model that processes these descriptions and answers basic questions related to the data.
+This repository implements Retrieval-Augmented Generation (RAG) techniques to analyze company descriptions. It includes three main components: RAG, RAG-Fusion, and RAG-Multi-Query, each designed to enhance the performance of querying a dataset of public companies.
 
-## Objectives
-- Develop a management tool for analyzing company descriptions.
-- Implement a retrieval-augmented generation (RAG) approach to answer questions based on company data.
-- Evaluate the performance of the model using ROUGE scores and cosine similarity metrics.
+## Components
 
-## Features
-- **Data Processing**: Load and preprocess company data from a CSV file.
-- **Embedding Model**: Use Hugging Face embeddings for semantic understanding.
-- **Retrieval Mechanism**: Implement a vector database using Qdrant for efficient retrieval.
-- **Language Model**: Utilize the LLAMA 3.1 model for generating responses based on retrieved data.
-- **Evaluation Metrics**: Assess performance using ROUGE scores and cosine similarity.
+### 1. RAG
+- The RAG component processes company descriptions to answer basic questions using a language model.
+- **Key Features**:
+  - Loads and preprocesses company data.
+  - Utilizes a language model (LLAMA 3.1) to generate answers based on company descriptions.
+  - Evaluates performance using ROUGE scores and cosine similarity.
+
+### 2. RAG-Fusion
+- This component enhances the RAG approach by fusing results from multiple retrieval queries.
+- **Key Features**:
+  - Generates multiple queries from a single question using a language model.
+  - Implements reciprocal rank fusion to combine results from different queries.
+  - Evaluates the quality of answers against ground truth data.
+
+### 3. RAG-Multi-Query
+- This implementation focuses on generating multiple perspectives on a single user question to improve retrieval accuracy.
+- **Key Features**:
+  - Produces alternative queries to retrieve relevant documents.
+  - Combines results from multiple queries while removing duplicates.
+  - Evaluates performance using ROUGE scores and cosine similarity.
 
 ## Requirements
 To run this project, you will need:
 - Python 3.x
-- Required libraries (listed in requirements.txt):
+- Required libraries (listed in `requirements.txt`):
   - pandas
   - numpy
   - qdrant-client
@@ -31,4 +42,5 @@ To run this project, you will need:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Azihadadi/Gen_AI_Company_Description_RAG/
+   cd Gen_AI_Company_Description_RAG
    
