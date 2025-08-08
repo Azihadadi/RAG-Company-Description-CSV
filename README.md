@@ -41,6 +41,6 @@ To run this project, you will need:
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Azihadadi/Gen_AI_Company_Description_RAG/
-   cd Gen_AI_Company_Description_RAG
+   git clone https://github.com/Azihadadi/RAG_Company_Description_CSV/
+   cd RAG_Company_Description_CSV
    
